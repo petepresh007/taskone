@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     return res.json({
         slack_name: slack_name,
         current_day: day,
-        utc_time: date.toUTCString(),
+        utc_time: date.toISOString().slice(0, 19) + "Z",
         track: track,
         github_file_url: "https://github.com/petepresh007/taskone/blob/main/app.js",
         github_repo_url: "https://github.com/petepresh007/taskone",
