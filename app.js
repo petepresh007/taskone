@@ -6,7 +6,7 @@ const port = 5000 || process.env.PORT;
 app.use(express.json());
 
 /**CREATING AN END POINT */
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     const { slack_name, track } = req.query;
     /**FIXING DATE*/
     const date = new Date();
